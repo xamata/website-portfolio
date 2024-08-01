@@ -1,17 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class EmailService {
-  private apiUrl = environment.API_URL;
+  private apiUrl =
+    'https://m2vq9le9cg.execute-api.us-west-1.amazonaws.com/restapi-portfolio/send-email';
 
   constructor(private http: HttpClient) {}
 
   sendEmail(emailData: {
-    toAddress: string;
+    fromAddress: string;
     subject: string;
     message: string;
   }) {

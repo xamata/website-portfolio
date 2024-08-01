@@ -15,7 +15,7 @@ import {
   styleUrl: './contact.component.css',
 })
 export class ContactComponent {
-  emailData = { toAddress: '', subject: '', message: '' };
+  emailData = { fromAddress: '', subject: '', message: '' };
 
   constructor(private emailService: EmailService) {}
 
@@ -29,7 +29,7 @@ export class ContactComponent {
         console.error('Error sending email:', error);
       }
     );
-    this.emailData.toAddress = '';
+    this.emailData.fromAddress = '';
     this.emailData.subject = '';
     this.emailData.message = '';
   }
