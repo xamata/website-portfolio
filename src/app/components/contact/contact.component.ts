@@ -20,15 +20,15 @@ export class ContactComponent {
   constructor(private emailService: EmailService) {}
 
   sendEmail() {
-    // this.emailService.sendEmail(this.emailData).subscribe(
-    //   (response) => {
-    //     alert('Your form has been submitted!');
-    //     console.log('Email sent successfully:', response);
-    //   },
-    //   (error) => {
-    //     console.error('Error sending email:', error);
-    //   }
-    // );
+    this.emailService.sendEmail(this.emailData).subscribe(
+      (response) => {
+        alert('Your form has been submitted!');
+        console.log('Email sent successfully:', response);
+      },
+      (error) => {
+        console.error('Error sending email:', error);
+      }
+    );
     this.emailData.toAddress = '';
     this.emailData.subject = '';
     this.emailData.message = '';
