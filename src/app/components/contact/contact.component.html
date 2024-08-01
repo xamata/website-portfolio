@@ -11,15 +11,15 @@
       <section class="section">
         <div class="container">
           <!-- contact form -->
-          <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+          <form (ngSubmit)="sendEmail()" #contactForm="ngForm">
             <!--name-->
             <div class="field">
-              <label class="label">Name</label>
+              <label class="label">Subject</label>
               <input
                 type="text"
-                name="name"
+                name="subject"
                 class="input"
-                [(ngModel)]="name"
+                [(ngModel)]="emailData.subject"
                 required
               />
             </div>
@@ -30,7 +30,7 @@
                 type="email"
                 id="email"
                 name="email"
-                [(ngModel)]="email"
+                [(ngModel)]="emailData.toAddress"
                 required
               />
             </div>
@@ -41,7 +41,7 @@
                 name="message"
                 class="textarea"
                 rows="4"
-                [(ngModel)]="message"
+                [(ngModel)]="emailData.message"
                 required
               ></textarea>
             </div>
@@ -62,3 +62,25 @@
   </div>
 </section>
 <!--End of Contact Card-->
+
+<!-- <form (ngSubmit)="sendEmail()">
+  <input
+    [(ngModel)]="emailData.toAddress"
+    name="to"
+    placeholder="To"
+    required
+  />
+  <input
+    [(ngModel)]="emailData.subject"
+    name="subject"
+    placeholder="Subject"
+    required
+  />
+  <textarea
+    [(ngModel)]="emailData.message"
+    name="message"
+    placeholder="Message"
+    required
+  ></textarea>
+  <button type="submit">Send Email</button>
+</form> -->

@@ -8,7 +8,6 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProjectsComponent } from './components/projects/projects.component';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +22,6 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     NavComponent,
     ProjectsComponent,
-    HttpClientModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
